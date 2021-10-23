@@ -1,0 +1,15 @@
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.csproj.AssemblyReference.cache
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.AssemblyInfoInputs.cache
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.AssemblyInfo.cs
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.csproj.CoreCompileInputs.cache
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\MergeCSV.exe
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\MergeCSV.deps.json
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\MergeCSV.runtimeconfig.json
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\MergeCSV.runtimeconfig.dev.json
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\MergeCSV.dll
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\MergeCSV.pdb
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.dll
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.pdb
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\obj\Debug\netcoreapp3.1\MergeCSV.genruntimeconfig.cache
+C:\Study\MCDA\Semester 1\GitHubProjects\MCDA5510_Assignments\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\CsvHelper.dll

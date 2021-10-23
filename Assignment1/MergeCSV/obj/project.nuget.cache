@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fWYePO1PNMFql8FuSWdcN9BamZe7LtfIggxOfLkF6Tf1ETOePHIIeOqmXE8iqmguNzJeLNk//u4U8LEtAMmwHQ==",
+  "success": true,
+  "projectFilePath": "C:\\Study\\MCDA\\Semester 1\\GitHubProjects\\A00457098_MCDA5510\\Assignment1\\MergeCSV\\MergeCsvFiles.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\surir\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
