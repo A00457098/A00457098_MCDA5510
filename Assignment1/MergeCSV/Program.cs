@@ -4,16 +4,21 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace MergeCsvFiles
 {
     class Program
     {
+        private static int validRecordsCount = 0;
+        private static Stopwatch watch = new Stopwatch();
+
         public static void Main(string[] args)
         {
             try
             {
+                watch.Start();
+                
                 DirectoryWalker directoryWalker = new DirectoryWalker();
 
                 var files = directoryWalker.Walk(Path.GetFullPath("../../../../../Sample Data"));
@@ -23,11 +28,24 @@ namespace MergeCsvFiles
 
                     foreach (var file in files)
                     {
+                        //Skip files which are not CSV
+                        if (!(Path.GetExtension(file) == ".csv"))
+                        {
+                            continue;
+                        }
                         var record = parser.Parse(file);
 
                         //Task.Run(() => WriteToOutputFile(record));
-                        WriteToOutputFile(record);
+                        if (record.Count != 0)
+                        {
+                            validRecordsCount += record.Count;
+                            WriteToOutputFile(record);
+                        }
                     }
+                    //Log the total skipped records.
+                    Console.WriteLine($"Skipped Records: {CSVParser.skippedRecordCount}");
+                    //Log the total valid records.
+                    Console.WriteLine($"Skipped Records: {validRecordsCount}");
                 }
             }
 
@@ -68,6 +86,12 @@ namespace MergeCsvFiles
             {
                 Console.WriteLine(e);
             }
+            finally
+            {
+                watch.Stop();
+                Console.WriteLine($"Time of Execution: {(watch.Elapsed.TotalSeconds)/60}");
+                
+            }
         }
 
         private static void WriteToOutputFile(List<HeaderInfo> records)
@@ -76,7 +100,9 @@ namespace MergeCsvFiles
             {
                 PrepareHeaderForMatch = args => args.Header.Replace(" ", "")
             };
-            
+
+            //Eliminates duplicate header record inclusion
+            config.HasHeaderRecord = !File.Exists(Path.GetFullPath("../../../../Output/Output.csv"));
 
             using var writter = new StreamWriter(Path.GetFullPath("../../../../Output/Output.csv"), true);
             using var csvWriter = new CsvWriter(writter, config);

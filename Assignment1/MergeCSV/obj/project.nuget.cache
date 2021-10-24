@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "fWYePO1PNMFql8FuSWdcN9BamZe7LtfIggxOfLkF6Tf1ETOePHIIeOqmXE8iqmguNzJeLNk//u4U8LEtAMmwHQ==",
+  "dgSpecHash": "1Wi5ZXPd+Nqo9knLm42LNOLaKdQb/x+NZUZ+2wS4idJfctTe2a1h4tdvrdiXPbHW/zDurtidQbS9eO5DwqyMYQ==",
   "success": true,
   "projectFilePath": "C:\\Study\\MCDA\\Semester 1\\GitHubProjects\\A00457098_MCDA5510\\Assignment1\\MergeCSV\\MergeCsvFiles.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\surir\\.nuget\\packages\\csvhelper\\27.1.1\\csvhelper.27.1.1.nupkg.sha512",
-    "C:\\Users\\surir\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+    "C:\\Users\\surir\\.nuget\\packages\\log4net\\2.0.12\\log4net.2.0.12.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\system.security.accesscontrol\\4.5.0\\system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
+    "C:\\Users\\surir\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
