@@ -1,5 +1,9 @@
 ﻿namespace MergeCsvFiles
 {
+    /// <summary>
+    /// This class contains propeerties which matches the header
+    /// This is required by CSV Hleper library to parse the files
+    /// </summary>
     public class HeaderInfo
     {
 

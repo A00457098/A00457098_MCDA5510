@@ -32,3 +32,4 @@ C:\Study\MCDA\Semester 1\GitHubProjects\A00457098_MCDA5510\Assignment1\MergeCSV\
 C:\Study\MCDA\Semester 1\GitHubProjects\A00457098_MCDA5510\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 C:\Study\MCDA\Semester 1\GitHubProjects\A00457098_MCDA5510\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
 C:\Study\MCDA\Semester 1\GitHubProjects\A00457098_MCDA5510\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Study\MCDA\Semester 1\GitHubProjects\A00457098_MCDA5510\Assignment1\MergeCSV\bin\Debug\netcoreapp3.1\log4net.config
