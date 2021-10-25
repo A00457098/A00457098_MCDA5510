@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace MergeCsvFiles
 {
@@ -11,7 +10,7 @@ namespace MergeCsvFiles
     /// </summary>
     public class DirectoryWalker
     {
-        private List<string> filesLstInDir = new List<string>();
+        private readonly List<string> filesLstInDir = new List<string>();
 
         /// <summary>
         /// Iterates re through the directory paths

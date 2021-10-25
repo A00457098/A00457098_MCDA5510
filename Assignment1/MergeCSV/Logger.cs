@@ -6,7 +6,7 @@ using System.Reflection;
 namespace MergeCsvFiles
 {
     /// <summary>
-    /// This class gives the log4net logger instance to be used for logger
+    /// This is singleton class which gives the log4net logger instance to be used for logger
     /// </summary>
     public class Logger
     {
@@ -17,6 +17,10 @@ namespace MergeCsvFiles
         {
 
         }
+
+        /// <summary>
+        /// Returns logger Instance
+        /// </summary>
         public static Logger Instance
         {
             get
@@ -30,7 +34,7 @@ namespace MergeCsvFiles
         }
 
         /// <summary>
-        /// 
+        /// Gets IlogInstance
         /// </summary>
         /// <returns></returns>
         public ILog GetLogger()

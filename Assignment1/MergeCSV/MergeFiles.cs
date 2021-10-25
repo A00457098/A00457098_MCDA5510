@@ -12,7 +12,7 @@ namespace MergeCsvFiles
     internal class MergeFiles
     {
         private static int validRecordsCount = 0;
-        private static Stopwatch watch = new Stopwatch();
+        private static readonly Stopwatch watch = new Stopwatch();
         private static readonly ILog logger = Logger.Instance.GetLogger();
 
         /// <summary>
@@ -34,6 +34,7 @@ namespace MergeCsvFiles
                 {
                     CSVParser parser = new CSVParser();
                     WriteOutput output = new WriteOutput();
+
                     Console.WriteLine("Writing to Output csv file..");
                     foreach (var file in files)
                     {
@@ -47,7 +48,7 @@ namespace MergeCsvFiles
                         if (record.Count != 0)
                         {
                             validRecordsCount += record.Count;
-                            output.WriteToOutputFile(record);
+                            output.WriteToOutputFile(record, file);
                         }
                     }
                     //Log the total skipped records.
@@ -98,6 +99,7 @@ namespace MergeCsvFiles
             {
                 watch.Stop();
                 Console.WriteLine("Writing completed. Please check Output and logs files for detailed execution report");
+                //Log total elapsed time
                 logger.Info($"Total Time of Execution: {Math.Round(watch.Elapsed.TotalSeconds/60, 2)}"); 
             }
         }
