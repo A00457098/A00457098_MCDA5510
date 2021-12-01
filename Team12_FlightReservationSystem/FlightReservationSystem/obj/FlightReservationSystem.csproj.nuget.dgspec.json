@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Study\\MCDA\\Semester 1\\GitHubProjects\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {}
+    "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {}
   },
   "projects": {
-    "C:\\Study\\MCDA\\Semester 1\\GitHubProjects\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {
+    "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Study\\MCDA\\Semester 1\\GitHubProjects\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
         "projectName": "FlightReservationSystem",
-        "projectPath": "C:\\Study\\MCDA\\Semester 1\\GitHubProjects\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
-        "packagesPath": "C:\\Users\\surir\\.nuget\\packages\\",
-        "outputPath": "C:\\Study\\MCDA\\Semester 1\\GitHubProjects\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\obj\\",
+        "projectPath": "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
+        "packagesPath": "C:\\Users\\Jongwon Shinn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\surir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jongwon Shinn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -43,6 +45,18 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
