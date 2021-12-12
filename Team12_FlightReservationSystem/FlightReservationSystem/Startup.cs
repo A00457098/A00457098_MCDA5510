@@ -29,6 +29,7 @@ namespace FlightReservationSystem
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))); //Get ConnectionString from appsetting.json
 
             services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +50,7 @@ namespace FlightReservationSystem
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -56,6 +58,7 @@ namespace FlightReservationSystem
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

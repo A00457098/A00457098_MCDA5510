@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FlightReservationSystem.Controllers
+namespace FlightReservationSystem.Controllers.h
 {
     public class HomeController : Controller
     {

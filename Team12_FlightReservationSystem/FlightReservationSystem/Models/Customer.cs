@@ -1,27 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace FlightReservationSystem.Models
 {
     public class Customer
     {
         [Key]
-        public String Username { get; set; }
+        public string Username { get; set; }
 
-        public String Password{ get; set; }
+        public string Password{ get; set; }
 
-        public String Name { get; set; }
+        public string Name { get; set; }
 
-        public String ContactNo { get; set; }
+        public string ContactNo { get; set; }
 
-        public String CardNumber {get; set; }
+        public string CardNumber {get; set; }
 
         public int CVV { get; set; }
 
-        public String CardExpiry { get; set; }
+        public string CardExpiry { get; set; }
 
         
 
