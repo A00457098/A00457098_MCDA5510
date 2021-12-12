@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Search Flights";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Search flights here.</p>
+
+@{
+Html.BeginForm("Search","Home","Index",FormMethod.Post);
+
+<center><table><tr>
+<td>
+    <h3>From</h3>
+    <input type="text" 
+           name="departureCity" 
+           placeholder="Enter your departure" 
+           required="" />
+</td>
+
+<td>
+    <h3>To</h3>
+    <input type="text" 
+           name="destinationCity" 
+           placeholder="Enter your destination" 
+           required="" />
+</td>
+
+<td>
+    <h3>Date  </h3>
+    <input type="date" 
+           name="date" 
+           onfocus="this.value = '';"  
+           onblur="if (this.value == '') { this.value = 'mm/dd/yy';}" />
+</td>
+    <td>
+        <h3></h3>
+        <input type="submit" value="Submit"  />
+    </td>
+</tr>
+</table></center>
+
+
+}

@@ -10,21 +10,40 @@
     <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
+    <style>
+        div {
+            color: green;
+        }
+
+        p {
+            color: blue;
+        }
+    </style>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FlightReservationSystem</a>
-                
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                   <partial name="_LoginPartial.cshtml"/>
+                    <partial name="_LoginPartial.cshtml" />
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
+        <a asp-area="" asp-controller="Home" asp-action="Search">Search</a>
+    </div>
+    <div class="container">
+        <a asp-area="" asp-controller="Home" asp-action="Details">Details</a>
+    </div>
+    <div class="container">
+        <a asp-area="" asp-controller="Home" asp-action="Payment">Payment</a>
+    </div>
+    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+
     </div>
 
     <footer class="border-top footer text-muted">
