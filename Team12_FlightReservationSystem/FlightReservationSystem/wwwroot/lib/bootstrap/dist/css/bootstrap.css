@@ -6590,7 +6590,9 @@ button.bg-dark:focus {
 .bg-white {
   background-color: #fff !important;
 }
-
+.bg-sky {
+    background-color: #b3d7ff7d !important
+}
 .bg-transparent {
   background-color: transparent !important;
 }
