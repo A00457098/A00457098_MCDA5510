@@ -1,13 +1,9 @@
-﻿using FlightReservationSystem.Models;
+﻿using System.Diagnostics;
+using FlightReservationSystem.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace FlightReservationSystem.Controllers.h
+namespace FlightReservationSystem.Controllers
 {
     public class HomeController : Controller
     {
