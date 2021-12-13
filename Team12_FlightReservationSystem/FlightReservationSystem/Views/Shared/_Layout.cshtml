@@ -22,10 +22,24 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-sky border-bottom box-shadow mb-3">
             <div class="container">
+
+
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Book My Flight <img src="~/images/images.png"  height="60" width="60" class="img-thumbnail"/></a>
-                
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                       
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Index">Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="SearchForm">Book</a>
+                        </li>
+                    </ul>
+                </div>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
+
                 </div>
             </div>
         </nav>
