@@ -3,6 +3,11 @@
 }
 <h1>@ViewData["Title"]</h1>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/jquery.payform.min.js" charset="utf-8"></script>
+<script src="/js/site.js"></script>
+
 @{
     Html.BeginForm("Payment", "Home", "Index", FormMethod.Post);
 
@@ -54,9 +59,17 @@
                 </label>
                 <div class="form-input-wide " data-layout="half">
                     <span class="form-sub-label-container" style="vertical-align:top">
-                        <input type="number" name="cardNumber" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: 1234 1234 1234 1234" data-component="cardNumber" aria-labelledby="label_30 sublabel_input_30" required="" />
+                        <input type="number" name="cardNumber" id="cardNumber" data-defaultvalue=""
+                               style="width:310px" size="310" value=""
+                               placeholder="ex: 1234 1234 1234 1234" class="form-textbox" required="" />
                         <label class="form-sub-label" style="min-height:13px" aria-hidden="false">  </label>
                     </span>
+                </div>
+
+                <div class="form-group" id="credit_cards">
+                    <img src="/images/visa.jpg" id="visa">
+                    <img src="/images/mastercard.jpg" id="mastercard">
+                    <img src="/images/amex.jpg" id="amex">
                 </div>
             </li>
 
@@ -67,30 +80,33 @@
                         *
                     </span>
                 </label>
-                <select>
-                    <option>--Select Month--</option>
-                    <option value="01">January</option>
-                    <option value="02">February </option>
-                    <option value="03">March</option>
-                    <option value="04">April</option>
-                    <option value="05">May</option>
-                    <option value="06">June</option>
-                    <option value="07">July</option>
-                    <option value="08">August</option>
-                    <option value="09">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                </select>
-                <select>
-                    <option>--Select Year--</option>
-                    <option value="16"> 2021</option>
-                    <option value="17"> 2022</option>
-                    <option value="18"> 2023</option>
-                    <option value="19"> 2024</option>
-                    <option value="20"> 2025</option>
-                    <option value="21"> 2026</option>
-                </select>
+                <div class="form-input-wide" data-layout="half" id="expiration-date">
+                    <select style="min-height:13px" aria-hidden="false" class="form-textbox">
+
+                        <option style="display:none"> </option>
+                        <option value="01">January</option>
+                        <option value="02">February </option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select style="min-height:13px" aria-hidden="false" class="form-textbox">
+                        <option style="display:none"> </option>
+                        <option value="16"> 2021</option>
+                        <option value="17"> 2022</option>
+                        <option value="18"> 2023</option>
+                        <option value="19"> 2024</option>
+                        <option value="20"> 2025</option>
+                        <option value="21"> 2026</option>
+                    </select>
+                </div>
 
             </li>
 
@@ -103,11 +119,60 @@
                 </label>
                 <div class="form-input-wide " data-layout="half">
                     <span class="form-sub-label-container" style="vertical-align:top">
-                        <input type="number" name="cardNumber" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: 123" data-component="cardNumber" aria-labelledby="label_30 sublabel_input_30" required="" />
-                        <label class="form-sub-label" style="min-height:13px" aria-hidden="false">  </label>
+                        <input type="number" name="streetNumber" class="form-textbox validate[required]"
+                               placeholder="ex: 123" id="cvv"
+                               data-defaultvalue="" size="15" value="" required="" />
                     </span>
                 </div>
             </li>
+
+            <li class="form-line required">
+                <label class="form-label form-label-top form-label-auto">
+                    Shipping Address
+                    <span class="form-required">
+                        *
+                    </span>
+                </label>
+                <div class="form-input-wide" data-layout="full">
+                    <div data-wrapper-react="true">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="text" name="streetName" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_29 given-name" size="10" value="" data-component="first" aria-labelledby="label_29 sublabel_29_first" required="" />
+                            <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> Street Name </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="number" name="streetNumber" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_29 family-name" size="15" value="" data-component="last" aria-labelledby="label_29 sublabel_29_last" required="" />
+                            <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> Street Number </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="number" name="streetNumber" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_29 family-name" size="15" value="" data-component="last" aria-labelledby="label_29 sublabel_29_last" required="" />
+                            <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> Unit/Apartment/House Number </label>
+                        </span>
+                    </div>
+
+                    <div data-wrapper-react="true">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="text" name="city" class="form-textbox validate[required]" data-defaultvalue="" size="10" value="" required="" />
+                            <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> City </label>
+                        </span>
+
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="text" name="province" class="form-textbox validate[required]" data-defaultvalue="" family-name" size="15" value="" required="" />
+                            <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> Province/State/Territory </label>
+                        </span>
+                        <span class="form-sub-label-container" style="vertical-align:top">
+
+                            <select id="country" name="country" data-defaultvalue="" class="form-textbox" style="min-height:13px" aria-hidden="false">
+                                <option style="display:none"> </option>
+                                <option value="Canada">Canada</option>
+                                <option value="USA">USA</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> Country </label>
+                        </span>
+                    </div>
+                </div>
+            </li>
+
 
             <li class="form-line" data-type="control_button">
                 <div class="form-input-wide" data-layout="full">
@@ -118,9 +183,7 @@
                     </div>
                 </div>
             </li>
-
-</div>
-
-
+        </ul>
+    </div>
 
 }
