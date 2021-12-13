@@ -1,43 +1,51 @@
 ﻿@{
     ViewData["Title"] = "Search Flights";
 }
-<h1>@ViewData["Title"]</h1>
+<h3 class="text-center">@ViewData["Title"]</h3>
 
-<p>Search flights here.</p>
 
 @{
-Html.BeginForm("Search","Home","Index",FormMethod.Post);
+    Html.BeginForm("Search", "Home", "Index", FormMethod.Post);
 
-<center><table><tr>
-<td>
-    <h3>From</h3>
-    <input type="text" 
-           name="departureCity" 
-           placeholder="Enter your departure" 
-           required="" />
-</td>
+    <center>
+        <table cellpadding="7">
+            <tr>
+                <td>
+                    @*<h4>Departure City</h4>*@
+                    <input type="text"
+                           name="departureCity"
+                           placeholder="From"
+                           required="" />
 
-<td>
-    <h3>To</h3>
-    <input type="text" 
-           name="destinationCity" 
-           placeholder="Enter your destination" 
-           required="" />
-</td>
+                </td>
 
-<td>
-    <h3>Date  </h3>
-    <input type="date" 
-           name="date" 
-           onfocus="this.value = '';"  
-           onblur="if (this.value == '') { this.value = 'mm/dd/yy';}" />
-</td>
-    <td>
-        <h3></h3>
-        <input type="submit" value="Submit"  />
-    </td>
-</tr>
-</table></center>
+                <td>
+                    @*<h4>Arrival City</h4>*@
+                    <input type="text"
+                           name="destinationCity"
+                           placeholder="To"
+                           required="" />
+                </td>
+
+                <td>
+                    @*<h4>Departure Date </h4>*@
+                    <input type="date"
+                           name="date"
+                           onfocus="this.value = '';"
+                           onblur="if (this.value == '') { this.value = " Departure"}" />
+                </td>
+            </tr>
+            <tr>
+                <td />
+            </tr>
+            <tr>
+                <td />
+                <td>
+                    <input class="btn-primary btn-block" type="submit" value="Find" />
+                </td>
+            </tr>
+        </table>
+    </center>
 
 
 }

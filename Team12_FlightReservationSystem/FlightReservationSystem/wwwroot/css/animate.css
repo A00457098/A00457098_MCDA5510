@@ -1,0 +1,141 @@
+﻿/*body {
+}
+#cf img {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;*/
+    /* if you only want to cycle a finite amount of times, 
+   simply change 'infinite' with # of iterations you need */
+    /*animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-direction: alternate;*/ /* not strictly necessary */
+    /*position: center;
+}
+
+    #cf img:nth-of-type(1) {
+        animation-delay: 5s;
+    }
+
+    #cf img:nth-of-type(2) {
+        animation-delay: 3s;
+    }
+
+    #cf img:nth-of-type(3) {*/
+        /* add some delay for the first picture as well */
+        /*animation-delay: 1s;
+    }
+
+@keyframes cf3FadeInOut {*/
+    /* distributing times evenly */
+    /*0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}*/
+
+/*.container {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin: 10px;
+    display: inline-block;
+}*/
+
+.element {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    opacity: 0;
+    animation: anim 6s infinite;
+}
+
+
+    .element:nth-child(1) {
+        /*background-color: lightyellow;*/
+        animation-delay: 0s;
+    }
+
+    .element:nth-child(2) {
+        /*background-color: lightgreen;*/
+        animation-delay: 2s;
+    }
+
+    .element:nth-child(3) {
+        /*background-color: pink;*/
+        animation-delay: 4s;
+    }
+
+    .element:nth-child(4) {
+        /*background-color: lightblue;*/
+        animation-delay: 6s;
+    }
+
+    .element:nth-child(5) {
+        /*background-color: coral;*/
+        animation-delay: 8s;
+    }
+
+    .element:nth-child(6) {
+        /*background-color: aliceblue;*/
+        animation-delay: 10s;
+    }
+
+    .element:nth-child(7) {
+        /*background-color: burlywood;*/
+        animation-delay: 12s;
+    }
+
+    .element:nth-child(8) {
+        /*background-color: bisque;*/
+        animation-delay: 14s;
+    }
+
+    .element:nth-child(9) {
+        /*background-color: beige;*/
+        animation-delay: 16s;
+    }
+
+    .element:nth-last-child(3):first-child,
+    .element:nth-last-child(3):first-child ~ .element {
+        animation-duration: 6s;
+    }
+
+    .element:nth-last-child(6):first-child,
+    .element:nth-last-child(6):first-child ~ .element {
+        animation-duration: 12s;
+    }
+
+    .element:nth-last-child(9):first-child,
+    .element:nth-last-child(9):first-child ~ .element {
+        animation-duration: 18s;
+    }
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+        z-index: 100;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
