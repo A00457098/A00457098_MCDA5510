@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {}
+    "E:\\MCDA\\5510\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {
+    "E:\\MCDA\\5510\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
+        "projectUniqueName": "E:\\MCDA\\5510\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
         "projectName": "FlightReservationSystem",
-        "projectPath": "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
-        "packagesPath": "C:\\Users\\Jongwon Shinn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jongwon Shinn\\Desktop\\5510 Software Develpment\\Assignments\\4. Final Project\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\obj\\",
+        "projectPath": "E:\\MCDA\\5510\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\FlightReservationSystem.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "E:\\MCDA\\5510\\A00457098_MCDA5510\\Team12_FlightReservationSystem\\FlightReservationSystem\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Jongwon Shinn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -46,6 +40,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.12, )"
@@ -55,6 +57,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [

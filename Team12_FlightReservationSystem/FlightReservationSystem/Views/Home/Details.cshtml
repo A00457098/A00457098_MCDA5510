@@ -1,0 +1,119 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    Html.BeginForm("Details", "Home", "Index", FormMethod.Post);
+
+    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=5f30e2a790832f3e96009402" />
+        <div role="main" class="form-all">
+
+            <ul class="form-section page-section">
+                <li class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-large">
+                        <div class="header-text httal htvam">
+                            <h1 class="form-header" data-component="header">
+                                Passenger Details
+                            </h1>
+                            <div class="form-subHeader">
+                                Add the passenger details
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line " data-type="control_spinner" id="id_32">
+                    <label class="form-label form-label-top form-label-auto" id="label_32" for="input_32">
+                        Number of Passengers
+                        <span class="form-required">
+                            *
+                        </span>
+                    </label>
+                    <div id="cid_32" class="form-input-wide" data-layout="half">
+                        <div data-wrapper-react="true">
+                            <input type="number" id="input_32" name="q32_numberOf32" data-type="input-spinner" class="form-spinner-input  form-textbox validate[required]" data-defaultvalue="0" value="0" data-component="spinner" aria-labelledby="label_32" required="" />
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line required" data-type="control_fullname">
+                    <label class="form-label form-label-top form-label-auto">
+                        Full Name
+                        <span class="form-required">
+                            *
+                        </span>
+                    </label>
+                    <div class="form-input-wide" data-layout="full">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                                <input type="text" name="firstName" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_29 given-name" size="10" value="" data-component="first" aria-labelledby="label_29 sublabel_29_first" required="" />
+                                <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> First Name </label>
+                            </span>
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="last">
+                                <input type="text" id="last_29" name="lastName" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_29 family-name" size="15" value="" data-component="last" aria-labelledby="label_29 sublabel_29_last" required="" />
+                                <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> Last Name </label>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_email">
+                    <label class="form-label form-label-top form-label-auto">
+                        E-mail
+                        <span class="form-required">
+                            *
+                        </span>
+                    </label>
+                    <div class="form-input-wide " data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="email" name="emailID" class="form-textbox validate[required, Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_30 sublabel_input_30" required="" />
+                            <label class="form-sub-label" style="min-height:13px" aria-hidden="false"> example@example.com </label>
+                        </span>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_phone">
+                    <label class="form-label form-label-top form-label-auto">
+                        Phone Number
+                        <span class="form-required">
+                            *
+                        </span>
+                    </label>
+                    <div id="cid_31" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            <input type="tel" name="phoneNumber" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_31 tel-national" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" required="" />
+                            <label class="form-sub-label is-empty" style="min-height:13px" aria-hidden="false">  </label>
+                        </span>
+                    </div>
+                </li>
+                <li class="form-line allowTime" data-type="control_datetime">
+                    <label class="form-label form-label-top form-label-auto">
+                        Date of Birth:
+
+                        <span class="form-required">
+                            *
+                        </span>
+                    </label>
+
+                    <div id="cid_15" class="form-input " data-layout="full">
+                        <div data-wrapper-react="true" class="extended">
+                            <input type="date"
+                                   name="date"
+                                   onfocus="this.value = '';"
+                                   onblur="if (this.value == '') { this.value = 'mm/dd/yy';}" />
+                        </div>
+                    </div>
+
+                </li>
+
+
+                <li class="form-line" data-type="control_button">
+                    <div class="form-input-wide" data-layout="full">
+                        <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
+                            <button type="submit" class="form-submit-button submit-button" data-component="button" data-content="">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        }
