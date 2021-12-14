@@ -1,6 +1,6 @@
 ﻿@model FlightReservationSystem.Models.Flight
 
-<h4>Flight Search</h4>
+<h4>Search Flights</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,9 +15,7 @@
 
                 <label class=" control-label">Departure Date </label>
                 <input type="date"
-                       name="searchTerm2"
-                       onfocus="this.value = '';"
-                       onblur="if (this.value == '') { this.value = " Departure"}" />
+                       name="searchTerm2" class="form-control"/>
             </div>
 
           
@@ -27,9 +25,5 @@
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

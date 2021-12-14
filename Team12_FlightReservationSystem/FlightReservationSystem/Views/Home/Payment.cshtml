@@ -1,12 +1,5 @@
-﻿@{
-    ViewData["Title"] = "Payment";
-}
-<h1>@ViewData["Title"]</h1>
+﻿
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="/js/jquery.payform.min.js" charset="utf-8"></script>
-<script src="/js/site.js"></script>
 
 @{
     Html.BeginForm("Payment", "Home", "Index", FormMethod.Post);
@@ -81,31 +74,37 @@
                     </span>
                 </label>
                 <div class="form-input-wide" data-layout="half" id="expiration-date">
-                    <select style="min-height:13px" aria-hidden="false" class="form-textbox">
+                    <tr>
+                    <td>
+                        <select style= "min-height: 13px" aria-hidden="false" class="form-textbox">
 
-                        <option style="display:none"> </option>
-                        <option value="01">January</option>
-                        <option value="02">February </option>
-                        <option value="03">March</option>
-                        <option value="04">April</option>
-                        <option value="05">May</option>
-                        <option value="06">June</option>
-                        <option value="07">July</option>
-                        <option value="08">August</option>
-                        <option value="09">September</option>
-                        <option value="10">October</option>
-                        <option value="11">November</option>
-                        <option value="12">December</option>
-                    </select>
-                    <select style="min-height:13px" aria-hidden="false" class="form-textbox">
-                        <option style="display:none"> </option>
-                        <option value="16"> 2021</option>
-                        <option value="17"> 2022</option>
-                        <option value="18"> 2023</option>
-                        <option value="19"> 2024</option>
-                        <option value="20"> 2025</option>
-                        <option value="21"> 2026</option>
-                    </select>
+                            <option style="display: none" selected="selected"> Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February </option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select style="min-height: 13px" aria-hidden="false" class="form-textbox">
+                            <option style="display: none" selected="selected">Year </option>
+                            <option value="16"> 2021</option>
+                            <option value="17"> 2022</option>
+                            <option value="18"> 2023</option>
+                            <option value="19"> 2024</option>
+                            <option value="20"> 2025</option>
+                            <option value="21"> 2026</option>
+                        </select>
+                    </td>
+                    </tr>
                 </div>
 
             </li>
@@ -177,7 +176,7 @@
             <li class="form-line" data-type="control_button">
                 <div class="form-input-wide" data-layout="full">
                     <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField">
-                        <button type="submit" class="form-submit-button submit-button" data-component="button" data-content="">
+                        <button type="submit" class="btn-primary" data-component="button" data-content="">
                             Submit
                         </button>
                     </div>
