@@ -50,17 +50,20 @@ namespace FlightReservationSystem.Data
             throw new NotImplementedException();
         }
 
-        public List<Flight> SerachFlights(string searchTerm)
+        public List<Flight> SerachFlights(string searchTerm, string searchTerm1, string searchTerm2)
         {
             List<Flight> foundFlights = new List<Flight>();
 
-            string sqlStatement = "SELECT * FROM dbo.flight WHERE Arrival_City LIKE @Arrival_City";
+            //string sqlStatement = "SELECT * FROM dbo.flight WHERE Arrival_City LIKE @Arrival_City";
+            string sqlStatement = "SELECT * FROM dbo.flight WHERE Arrival_City LIKE @Arrival_City AND Departure_City LIKE @Departure_City AND Departure_Date LIKE @Departure_Date ";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             { // You can talk to DB in this curly brakets
 
                 SqlCommand command = new SqlCommand(sqlStatement, connection);
-                command.Parameters.AddWithValue("@Arrival_City", '%' + searchTerm + '%');
+                command.Parameters.AddWithValue("@Departure_City", '%' + searchTerm + '%');
+                command.Parameters.AddWithValue("@Arrival_City", '%' + searchTerm1 + '%');
+                command.Parameters.AddWithValue("@Departure_Date", '%' + searchTerm2 + '%');
 
                 try
                 {

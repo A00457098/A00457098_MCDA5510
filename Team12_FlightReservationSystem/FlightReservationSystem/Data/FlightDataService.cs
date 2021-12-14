@@ -10,7 +10,7 @@ namespace FlightReservationSystem.Data
     {
 
         List<Flight> GetAllFlights();
-        List<Flight> SerachFlights(string searchTerm);
+        List<Flight> SerachFlights(string searchTerm, string searchTerm1, string searchTerm2);
 
         Flight GetFlightID(int id);
 

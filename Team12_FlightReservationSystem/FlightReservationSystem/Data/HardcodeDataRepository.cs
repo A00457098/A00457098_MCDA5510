@@ -25,7 +25,7 @@ namespace FlightReservationSystem.Data
             throw new NotImplementedException();
         }
 
-        public List<Flight> SerachFlights(string searchTerm)
+        public List<Flight> SerachFlights(string searchTerm,string searchTerm1, string searchTerm2)
         {
             throw new NotImplementedException();
         }
