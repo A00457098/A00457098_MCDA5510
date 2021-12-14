@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<FlightReservationSystem.Models.Flight>
 
 
-<table class="table">
+<table class="table sortable">
     <thead>
         <tr>
-            
+
             <th>
                 @Html.DisplayNameFor(model => model.Flight_Name)
             </th>
@@ -14,7 +14,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Arrival_City)
             </th>
-            <th>
+            <th sorted="desc">
                 @Html.DisplayNameFor(model => model.Departure_Date)
             </th>
             <th>
@@ -27,32 +27,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            
-            <td>
-                @Html.DisplayFor(modelItem => item.Flight_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Departure_City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Arrival_City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Departure_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Arrival_Date)
-            </td>
-            <td>
-               $@Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.ActionLink("Book", "Book", new { /* id=item.PrimaryKey */ }) 
-                
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Flight_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departure_City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arrival_City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departure_Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arrival_Date)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.ActionLink("Book", "Details", new { /* id=item.PrimaryKey */ })
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

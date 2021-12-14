@@ -35,11 +35,6 @@ namespace FlightReservationSystem.Controllers
             return View();
         }
 
-        public IActionResult Details()
-        {
-            return View();
-        }
-
         public IActionResult Payment()
         {
             return View();
