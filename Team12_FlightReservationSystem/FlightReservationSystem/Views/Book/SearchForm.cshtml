@@ -1,14 +1,21 @@
 ﻿@model FlightReservationSystem.Models.Flight
 
-<h4>Flight Search</h4>
+<h4>Search Flights</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="SearchResults">
             
             <div class="form-group">
-                <label class=" control-label">Please enter the city you want to travel</label>
+                <label class=" control-label">Departure</label>
                 <input name="searchTerm" class="form-control" />
+
+                <label class=" control-label">Arrival</label>
+                <input name="searchTerm1" class="form-control" />
+
+                <label class=" control-label">Departure Date </label>
+                <input type="date"
+                       name="searchTerm2" class="form-control"/>
             </div>
 
           
@@ -18,9 +25,5 @@
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

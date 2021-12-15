@@ -16,5 +16,7 @@ namespace FlightReservationSystem.Data
         }
 
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<Passenger> Passenger { get; set; }
+        public DbSet<Ticket> Ticket { get; set; }
     }
 }

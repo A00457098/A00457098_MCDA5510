@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
     <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script src="~/js/sorttable.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.payform.min.js" charset="utf-8"></script>
+    <script src="~/js/site.js"></script>
+
 </head>
 <body>
     <style>
@@ -32,15 +37,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Book My Flight</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Index">Flights</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="SearchForm">Book</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Search">Search</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="SearchForm">Search</a>
                         </li>
                     </ul>
                 </div>
@@ -52,15 +50,7 @@
             </div>
         </nav>
     </header>
-    @*<div class="container">
-        <a asp-area="" asp-controller="Home" asp-action="Search">Search</a>
-    </div>
-    <div class="container">
-        <a asp-area="" asp-controller="Home" asp-action="Details">Details</a>
-    </div>
-    <div class="container">
-        <a asp-area="" asp-controller="Home" asp-action="Payment">Payment</a>
-    </div>*@
+   
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -70,7 +60,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2021 - Book My Flight </a>
+            &copy; 2021 - Book My Flight
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

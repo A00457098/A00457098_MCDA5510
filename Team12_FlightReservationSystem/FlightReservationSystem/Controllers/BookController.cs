@@ -10,21 +10,12 @@ namespace FlightReservationSystem.Controllers
 {
     public class BookController : Controller
     {
-        public IActionResult Index()
-        {
-
-            HardcodeDataRepository hardcodeDataRepository = new HardcodeDataRepository();
-
-            FlightDAO flightDAO = new FlightDAO();
-
-            return View(flightDAO.GetAllFlights());
-        }
-
-        public IActionResult SearchResults(string searchTerm) {
+        
+        public IActionResult SearchResults(string searchTerm, string searchTerm1, string searchTerm2) {
 
 
             FlightDAO flights= new FlightDAO();
-            List<Flight> flightList = flights.SerachFlights(searchTerm);
+            List<Flight> flightList = flights.SerachFlights(searchTerm, searchTerm1, searchTerm2);
 
             return View("index", flightList);
         

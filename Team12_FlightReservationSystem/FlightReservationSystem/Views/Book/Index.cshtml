@@ -12,6 +12,9 @@
                 @Html.DisplayNameFor(model => model.Departure_City)
             </th>
             <th>
+           
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Arrival_City)
             </th>
             <th sorted="desc">
@@ -29,31 +32,34 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+        <tr>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Flight_Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Departure_City)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Arrival_City)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Departure_Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Arrival_Date)
-                </td>
-                <td>
-                    $@Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.ActionLink("Book", "Details", new { /* id=item.PrimaryKey */ })
+            <td>
+                @Html.DisplayFor(modelItem => item.Flight_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departure_City)
+            </td>
+            <td>
+                ---->
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arrival_City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departure_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Arrival_Date)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Book", "Details", new { /* id=item.PrimaryKey */ })
 
-                </td>
-            </tr>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
