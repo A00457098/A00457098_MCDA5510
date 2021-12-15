@@ -1,72 +1,76 @@
 ﻿@model IEnumerable<FlightReservationSystem.Models.Flight>
 
-@if(string.IsNullOrEmpty(@ViewBag.SearchResultMessage))
-{
+    @if(string.IsNullOrEmpty(@ViewBag.SearchResultMessage))
+    {
+    @Html.BeginForm("Details", "Book")
     <table class="table sortable">
         <thead>
-        <tr>
-
-            <th>
-                @Html.DisplayNameFor(model => model.Flight_Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Departure_City) <img src="~/images/flight_icon.webp" height="40" width="40"/>
-            </th>
-            <th>
-
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Arrival_City) <img src="~/images/landing-airplane.webp" height="40" width="40"/>
-            </th>
-            <th sorted="desc">
-                @Html.DisplayNameFor(model => model.Departure_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Arrival_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var item in Model)
-        {
             <tr>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Flight_Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Departure_City)
-                </td>
-                <td>
-                    <img src="~/images/flighttime.jpg" height="50" width="50"/>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Arrival_City)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Departure_Date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Arrival_Date)
-                </td>
-                <td>
-                    $@Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.ActionLink("Book", "PassengerDetails", new {/* id=item.PrimaryKey */})
+                <th>
+                    @Html.DisplayNameFor(model => model.Flight_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Departure_City) <img src="~/images/flight_icon.webp" height="40" width="40" />
+                </th>
+                <th>
 
-                </td>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrival_City) <img src="~/images/landing-airplane.webp" height="40" width="40" />
+                </th>
+                <th sorted="desc">
+                    @Html.DisplayNameFor(model => model.Departure_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrival_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th></th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Flight_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Departure_City)
+                    </td>
+                    <td>
+                        <img src="~/images/flighttime.jpg" height="50" width="50" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Arrival_City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Departure_Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Arrival_Date)
+                    </td>
+                    <td>
+                        $@Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+
+                        @Html.AntiForgeryToken()
+                        
+                        <input type="submit" value="Book" class="btn" />
+                    </td>
+                </tr>
+            }
         </tbody>
     </table>
-}
-else{
+    }
+    else{
     <h4>@ViewBag.SearchResultMessage</h4>
-    <br/><br/>
+    <br />
+    <br />
     <a asp-action="Search"><h5>Back To Search</h5></a>
-}
+    }

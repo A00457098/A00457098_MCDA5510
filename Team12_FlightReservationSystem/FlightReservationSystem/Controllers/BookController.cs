@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace FlightReservationSystem.Controllers
 {
@@ -32,9 +34,23 @@ namespace FlightReservationSystem.Controllers
 
             return View();
         }
-        public IActionResult PassengerDetails()
+
+        [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Details(string flightId, string source, string dest, string depDate, string arrDate, int cost)
+        {
+            Passenger model = new Passenger();
+            {
+                model.ID = flightId;
+            }
+            return View(model);
+        }
+
+        public IActionResult Details()
         {
             return View();
         }
+
     }
 }

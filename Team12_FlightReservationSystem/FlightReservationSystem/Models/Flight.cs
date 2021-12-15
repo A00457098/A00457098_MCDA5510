@@ -10,26 +10,23 @@ namespace FlightReservationSystem.Models
     public class Flight
     {
         [Key]
-       
-        
-        public String ID { get; set; }
+        public string ID { get; set; }
 
         [DisplayName("Flight Number")]
-
-        public String Flight_Name { get; set; }
-
+        public string Flight_Name { get; set; }
+        [Required]
         [DisplayName("Departure")]
-        public String Departure_City { get; set; }
-
+        public string Departure_City { get; set; }
+        [Required]
         [DisplayName("Arrival")]
-        public String Arrival_City { get; set; }
-
+        public string Arrival_City { get; set; }
+        [Required]
         [DisplayName("Departure Date")]
-        public String Departure_Date { get; set; }
-
+        public string Departure_Date { get; set; }
+        
         [DisplayName("Arrival Date")]
-        public String Arrival_Date { get; set; }
-
+        public string Arrival_Date { get; set; }
+       
         [DisplayName("Economy")]
         public int Price { get; set; }
 
