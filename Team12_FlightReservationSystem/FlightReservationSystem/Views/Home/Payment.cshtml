@@ -1,6 +1,4 @@
 ﻿
-
-
 @{
     Html.BeginForm("Payment", "Home", "Index", FormMethod.Post);
 
@@ -43,6 +41,25 @@
                 </div>
             </li>
 
+            <li>
+                <label>
+                    Select Card Type:
+                </label>
+                <div class="form-input-wide" data-layout="half" id="expiration-date">
+                    <form id="form1" runat="server">
+                        <div>
+                            <select id="slct" style="min-height:13px" aria-hidden="false" class="form-textbox" onchange="regexValidator()">
+                                <option>--Select Card Type--</option>
+                                <option value="01">MasterCard</option>
+                                <option value="02">VISA </option>
+                                <option value="03">AMEX</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </li>
+
+
             <li class="form-line" data-type="control_card">
                 <label class="form-label form-label-top form-label-auto">
                     Card Number
@@ -55,15 +72,12 @@
                         <input type="number" name="cardNumber" id="cardNumber" data-defaultvalue=""
                                style="width:310px" size="310" value=""
                                placeholder="ex: 1234 1234 1234 1234" class="form-textbox" required="" />
+   
                         <label class="form-sub-label" style="min-height:13px" aria-hidden="false">  </label>
                     </span>
                 </div>
 
-                <div class="form-group" id="credit_cards">
-                    <img src="/images/visa.jpg" id="visa">
-                    <img src="/images/mastercard.jpg" id="mastercard">
-                    <img src="/images/amex.jpg" id="amex">
-                </div>
+
             </li>
 
             <li class="form-line" data-type="control_card">
