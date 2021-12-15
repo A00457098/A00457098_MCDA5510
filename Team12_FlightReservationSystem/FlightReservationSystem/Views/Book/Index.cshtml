@@ -6,16 +6,16 @@
         <tr>
 
             <th>
-                @Html.DisplayNameFor(model => model.Flight_Name)
+                @Html.DisplayNameFor(model => model.Flight_Name) 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Departure_City)
+                @Html.DisplayNameFor(model => model.Departure_City) <img src="~/images/flight_icon.webp" height="40" width="40" />
             </th>
             <th>
            
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Arrival_City)
+                @Html.DisplayNameFor(model => model.Arrival_City) <img src="~/images/landing-airplane.webp" height="40" width="40" />
             </th>
             <th sorted="desc">
                 @Html.DisplayNameFor(model => model.Departure_Date)
@@ -41,7 +41,7 @@
                 @Html.DisplayFor(modelItem => item.Departure_City)
             </td>
             <td>
-                ---->
+                <img src="~/images/flighttime.jpg" height="50" width="50" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Arrival_City)
@@ -56,7 +56,7 @@
                 $@Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.ActionLink("Book", "Details", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Book", "PassengerDetails", new { /* id=item.PrimaryKey */ })
 
             </td>
         </tr>

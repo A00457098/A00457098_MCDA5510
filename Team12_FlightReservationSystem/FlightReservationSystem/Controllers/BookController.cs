@@ -22,12 +22,12 @@ namespace FlightReservationSystem.Controllers
         
         }
 
-        public IActionResult SearchForm() {
+        public IActionResult Search() {
 
 
             return View();
         }
-        public IActionResult Details()
+        public IActionResult PassengerDetails()
         {
             return View();
         }
