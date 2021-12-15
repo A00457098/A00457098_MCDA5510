@@ -16,8 +16,13 @@ namespace FlightReservationSystem.Controllers
 
             FlightDAO flights= new FlightDAO();
             List<Flight> flightList = flights.SerachFlights(searchTerm, searchTerm1, searchTerm2);
-
-            return View("index", flightList);
+            if (flightList.Count == 0)
+            {
+                ViewBag.SearchResultMessage =
+                    "Oops! No Flights are available for the selected criteria! Please try again after changing criteria";
+                //return View("Search");
+            }
+            return View("SearchResults", flightList);
         
         
         }
