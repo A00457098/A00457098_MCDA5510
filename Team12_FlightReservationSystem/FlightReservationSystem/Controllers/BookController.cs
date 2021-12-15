@@ -54,22 +54,10 @@ namespace FlightReservationSystem.Controllers
             return View();
         }
 
-        public bool validatePayment (string CardType, string CardNumber, string Country, string ZIP)
+        public bool validateCard (string CardType, string CardNumber)
         {
-            Regex canRegex = new Regex(@"^[a-zA-Z]\d[a-zA-Z][-\s]\d[a-zA-Z]\d$");
-            Regex usaRegex = new Regex(@"^4[0-9]{15}$");
-
-            bool zipValid = false;
+         
             bool cardValid = false;
-
-            if ((Country == "Other") || (Country == "Canada" && canRegex.IsMatch(ZIP)) || (Country == "USA" && usaRegex.IsMatch(ZIP)))
-            {
-                zipValid = true;
-            }
-            else
-            {
-                zipValid = false;
-            }
 
             if ((CardType == "visa" && CardNumber[0] == '4') || CardType == "mastercard" && CardNumber[0] == '5'
                 || (CardType == "mastercard" && CardNumber[0] == '3'))
@@ -81,21 +69,51 @@ namespace FlightReservationSystem.Controllers
                 cardValid = false;
             }
 
-            return cardValid && zipValid; 
+            return (cardValid); 
         }
-        public IActionResult Payment(string FirstName, string LastName, string CardType, string CardNumber,
+
+        public bool validateZIP(string Country, string ZIP)
+        {
+            Regex canRegex = new Regex(@"^[a-zA-Z]\d[a-zA-Z][-\s]\d[a-zA-Z]\d$");
+            Regex usaRegex = new Regex(@"^\d{5}$|^\d{9}$|^\d{5}-\d{4}$");
+
+            bool zipValid = false;
+
+            if ((Country == "Other") || (Country == "Canada" && canRegex.IsMatch(ZIP)) || (Country == "USA" && usaRegex.IsMatch(ZIP)))
+            {
+                zipValid = true;
+            }
+            else
+            {
+                zipValid = false;
+            }
+
+            return (zipValid);
+        }
+        public IActionResult PaymentCheck(string FirstName, string LastName, string CardType, string CardNumber,
             int CVV, string CardExpiryMonth, string CardExpiryYear, string StreetName, int StreetNumber,
             int UnitNumber, string City, string Province, string Country, string ZIP)
         {
 
-            bool v = validatePayment(CardType, CardNumber, Country, ZIP);
-            if (v)
-            {
-                return View("Index");
-            }
-            else
+            bool cardValid = validateCard(CardType, CardNumber);
+            bool zipValid = validateZIP(Country, ZIP);
+
+            if (cardValid && zipValid)
             {
                 return View("Search");
+            }
+            else
+            {   
+                if (cardValid == false)
+                {
+                    ModelState.AddModelError(nameof(Payment.CardNumber), "Invalid Card Number");
+                }
+                if (zipValid == false)
+                {
+                    ModelState.AddModelError(nameof(Payment.ZIP), "Invalid ZIP Code");
+                }
+                ModelState.AddModelError(nameof(Payment.CardNumber), "Invalid Card Number or Card Type");
+                return View("Payment");
             }
 
         }
