@@ -1,5 +1,6 @@
 ﻿@model FlightReservationSystem.Models.Flight
 
+
 <h4>Search Flights</h4>
 <hr />
 <div class="row">
@@ -8,14 +9,13 @@
             
             <div class="form-group">
                 <label class=" control-label">Departure</label>
-                <input name="searchTerm" class="form-control" />
+                <input name="searchTerm" class="form-control" required />
 
                 <label class=" control-label">Arrival</label>
-                <input name="searchTerm1" class="form-control" />
+                <input name="searchTerm1" class="form-control" required />
 
                 <label class=" control-label">Departure Date </label>
-                <input type="date"
-                       name="searchTerm2" class="form-control"/>
+                <input type="date" name="searchTerm2" class="form-control" required/>
             </div>
 
           
