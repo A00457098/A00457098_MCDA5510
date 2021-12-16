@@ -30,12 +30,20 @@ There are some constraints in data. For example, the departure city is Halifax, 
 - User can add one passenger with personal details. (All fileds should be filled)
 - User can proceed to payment page by creating passenger information.
 - User can go back to search page.
-
+- 
+### Review Booking
+- The user can see the details of their selected flight and their added details for the passengers. 
+- They can then proceed with the booking or cancel it. 
+- 
 ### Payment
 - The user has to fill their card details and address.
 - The card type (Visa/Amex/Mastercard) should correspond to the right type of card number.
 - The ZIP code should match the country selected (US/Canada)
+- If payment details validations succeed the ticket gets booked and user is presented with a PNR number
 
-### Review Booking
-- The user can see the details of their selected flight and their added details for the passengers. 
-- They can then proceed with the booking or cancel it. 
+- **### View Booking**
+- The user can see the details of their booked flights and they have an option to cancel it also.
+
+### Lookup PNR
+- Any user (including guest user) can see the details of their selected flight by searching the PNR.
+- 
