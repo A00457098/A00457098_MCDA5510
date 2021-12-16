@@ -38,19 +38,17 @@ namespace FlightReservationSystem.Controllers
         }
 
         [Authorize]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Details(string flightId, string source, string dest, string depDate, string arrDate, int cost)
+        //[HttpPost]
+        public IActionResult Details(string Id)
         {
-            Passenger model = new Passenger();
-            {
-                model.ID = flightId;
-            }
-            return View(model);
+            TempData["flightId"] = Id;
+            return View();
         }
 
-        public IActionResult Details()
+        [Authorize]
+        public IActionResult ReviewBooking(Passenger passenger)
         {
+            TempData["Passenger"] = passenger;
             return View();
         }
 

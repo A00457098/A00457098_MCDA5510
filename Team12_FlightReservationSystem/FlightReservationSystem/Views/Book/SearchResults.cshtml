@@ -1,8 +1,7 @@
 ﻿@model IEnumerable<FlightReservationSystem.Models.Flight>
 
-    @if(string.IsNullOrEmpty(@ViewBag.SearchResultMessage))
-    {
-    @Html.BeginForm("Details", "Book")
+@if (string.IsNullOrEmpty(@ViewBag.SearchResultMessage))
+{
     <table class="table sortable">
         <thead>
             <tr>
@@ -60,17 +59,19 @@
                     <td>
 
                         @Html.AntiForgeryToken()
-                        
-                        <input type="submit" value="Book" class="btn" />
+
+                        @*<input type="submit" value="Book" class="btn" new{@item} />*@
+                        @Html.ActionLink("Book", "Details", new { Id = @item.ID })
                     </td>
                 </tr>
             }
         </tbody>
     </table>
-    }
-    else{
+}
+else
+{
     <h4>@ViewBag.SearchResultMessage</h4>
     <br />
     <br />
     <a asp-action="Search"><h5>Back To Search</h5></a>
-    }
+}
