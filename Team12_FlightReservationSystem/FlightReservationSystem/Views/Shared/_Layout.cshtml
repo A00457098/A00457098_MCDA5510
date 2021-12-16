@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,10 +23,10 @@
         div {
             color: #1b6ec2;
         }
+
         p {
             color: blue;
         }
-        
     </style>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-sky border-bottom box-shadow mb-3">
@@ -41,8 +44,14 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Search">Search Flight</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Search">My Flight</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="LookupPnr">Lookup PNR</a>
                         </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="ManageBookings">My Bookings</a>
+                            </li>
+                        }
                     </ul>
                 </div>
 
@@ -53,7 +62,7 @@
             </div>
         </nav>
     </header>
-   
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

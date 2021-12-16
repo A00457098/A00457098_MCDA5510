@@ -1,0 +1,82 @@
+﻿@model BookingHistory
+<h2> PNR Details</h2>
+<br />
+
+
+@if (string.IsNullOrEmpty(@ViewBag.NoBookingsMsg))
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.PNR_Number)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Flight_Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Departure_City)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrival_City)
+                </th>
+                <th sorted="desc">
+                    @Html.DisplayNameFor(model => model.Departure_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Arrival_Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    Passenger First Name
+                </th>
+                <th>
+                    Passenger Last Name
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.PNR_Number)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.Flight_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.Departure_City)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.Arrival_City)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.Departure_Date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.Arrival_Date)
+                    </td>
+                    <td>
+                        $@Html.DisplayFor(modelItem => modelItem.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem.LastName)
+                    </td>
+                </tr>
+            
+        </tbody>
+    </table>
+}
+else
+{
+    <h4>@ViewBag.NoBookingsMsg</h4>
+}

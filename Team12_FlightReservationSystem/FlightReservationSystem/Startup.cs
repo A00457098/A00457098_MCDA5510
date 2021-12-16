@@ -61,11 +61,23 @@ namespace FlightReservationSystem
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Book}/{action=Details}/{id?}");
+                    pattern: "{controller=Book}/{action=PassengerDetails}/{id?}");
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Book}/{action=Payment}/{id?}");
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Book}/{action=ReviewBooking}/{id?}");
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Book}/{action=CancelBooking}/{id?}");
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Book}/{action=ViewBookingByPnr}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

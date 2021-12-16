@@ -1,0 +1,27 @@
+﻿@model BookingHistory
+
+
+<h4>Lookup PNR</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ViewBookingByPnr">
+
+            <div class="form-group">
+                <label class=" control-label">PNR</label>
+                @Html.EditorFor(model => model.PNR_Number)
+                <br />
+                <div class="form-group">
+                    <input type="submit" value="Search" class="btn btn-primary"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.WrongPnr))
+{
+    <h6>@ViewBag.WrongPnr</h6>
+}
+
+

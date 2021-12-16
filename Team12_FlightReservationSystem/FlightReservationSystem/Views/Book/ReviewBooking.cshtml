@@ -1,5 +1,131 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using Newtonsoft.Json
+<h2>Review Booking</h2>
+<br />
+<h4>Flight Details</h4>
+<form asp-action="Payment">
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    Flight Number
+                </th>
+                <th>
+                    Departure<img src="~/images/flight_icon.webp" height="40" width="40" />
+                </th>
+                <th>
+
+                </th>
+                <th>
+                    Arrival<img src="~/images/landing-airplane.webp" height="40" width="40" />
+                </th>
+                <th>
+                    Departure Date
+                </th>
+                <th>
+                    Arrival Date
+                </th>
+                <th>
+                    Price
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                Flight flight = JsonConvert.DeserializeObject<Flight>(TempData["Flight"].ToString());
+                TempData["Flight"] = JsonConvert.SerializeObject(flight);
+            }
+
+            <tr>
+
+                <td>
+                    @flight?.Flight_Name
+                </td>
+                <td>
+                    @flight?.Departure_City
+                </td>
+                <td>
+                    <img src="~/images/flighttime.jpg" height="50" width="50" />
+                </td>
+                <td>
+                    @flight?.Arrival_City
+                </td>
+                <td>
+                    @flight?.Departure_Date
+                </td>
+                <td>
+                    @flight?.Arrival_Date
+                </td>
+                <td>
+                    $@flight?.Price
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <h4>Passenger Details</h4>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Date Of Birth
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{
+                Passenger passenger = JsonConvert.DeserializeObject<Passenger>(TempData["Passenger"].ToString());
+                TempData["Passenger"] = JsonConvert.SerializeObject(passenger);
+            }
+
+            <tr>
+                <td>
+                    @passenger?.FirstName
+                </td>
+                <td>
+                    @passenger?.LastName
+                </td>
+
+                <td>
+                    @passenger?.Birth_Date
+                </td>
+                <td>
+                    @passenger?.Phone_Num
+                </td>
+                <td>
+                    @passenger?.Email
+                </td>
+                <td>
+                    @passenger?.Gender
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br /><br />
+    <input type="submit" class="btn-primary" value="Proceed To Payment" />
+    <p class="form-group">
+        <a asp-action="Search"><h5>Back To Search</h5></a>
+    </p>
+    </form>
