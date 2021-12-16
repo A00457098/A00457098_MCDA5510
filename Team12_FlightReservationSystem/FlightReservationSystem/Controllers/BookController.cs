@@ -39,7 +39,8 @@ namespace FlightReservationSystem.Controllers
 
         [Authorize]
         //[HttpPost]
-        public IActionResult Details(string Id)
+        public IActionResult PassengerDetails(string Id, string UserID, string FirstName, string LastName,
+            string Birth_Date, string Email, string Phone_Num, string Gender)
         {
             TempData["flightId"] = Id;
             return View();
@@ -49,7 +50,7 @@ namespace FlightReservationSystem.Controllers
         public IActionResult ReviewBooking(Passenger passenger)
         {
             TempData["Passenger"] = passenger;
-            return View();
+            return View("Payment");
         }
 
         public bool validateCard (string CardType, string CardNumber)
